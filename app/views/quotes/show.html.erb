@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+
+        <p><%= @quote.date %></p>
+        <p><%= @quote.quote %></p>
+        <p><%= @quote.author %></p>
+        <p><%= image_tag @quote.avatar_url, height: 250 if @quote.avatar_url %></p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

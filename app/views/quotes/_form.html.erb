@@ -1,0 +1,37 @@
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= form.label :quote %>
+    <%= form.text_area :quote, size: "30x10"  %>
+  </div>
+
+  <div>
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+  <div>
+    <%= form.label :date %>
+    <%= form.text_field :date, type: 'date' %>
+  </div>
+  <br/>
+  <div>
+    <%= form.label :avatar,"Profile Photo" %>
+  <%= form.file_field :avatar %>
+  </div>
+<br/>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
