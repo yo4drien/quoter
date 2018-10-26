@@ -1,11 +1,13 @@
-<h1>This is the home page</h1>
+<h1>Random Quote Generator</h1>
 
-<p>And these are the quote authors by frequency of appearance</p>
+<div class="owl-carousel">
+
+</div>
+
+<p>Quote Author Chart</p>
 
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
-<%= timeline [
-  ["Columbus", "1789-04-29", "1797-03-03"],
-  ["Mr. Washington", "1797-03-03", "1801-03-03"],
-  ["More Columbus", "1801-03-03", "1809-03-03"]
-] %>
+<%= timeline @quotes.map{|author, quotes| quotes.map{|q| [author, q.date, q.date + 5.year]}}.flatten(1), height: "500px", stacked: true %>
+
+<p>© <%= Date.today.year %> The Quote of the Day App.</p>

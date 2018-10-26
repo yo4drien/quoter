@@ -5,7 +5,7 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-# Use pg, not lite
+# Use pg, not sqlite3
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -65,3 +65,10 @@ end
   gem 'carrierwave', '~> 1.0'
   gem 'blazer'
   gem 'groupdate'
+
+  gem 'rspec-rails', '~> 3.8'
+  gem 'rails-controller-testing'
+
+  gem 'owlcarousel-rails'
+
+  gem 'jquery-rails'

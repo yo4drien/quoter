@@ -18,3 +18,6 @@
 //= require Chart.bundle
 //= require chartkick
 
+//= require jquery
+
+//= require owl.carousel
