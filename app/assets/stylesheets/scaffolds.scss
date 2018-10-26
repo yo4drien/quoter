@@ -82,3 +82,49 @@ div {
 label {
   display: block;
 }
+
+.chart {visibility:hidden;height:0px;}
+
+h1 {margin:0 auto;text-align:center;
+  color: #3b5998;}
+
+.quote {font-size:24px;text-align:center;margin:90px auto 20px auto;line-height:36px;width:70%;}
+
+.author {margin:0 auto;width:auto;text-align:center;font-size:16px;font-weight:700;}
+
+.quote:before {
+  content: "“";
+  font-size:48px;
+  color: #3b5998;
+  font-weight:700;
+  font-style: italic;
+  line-height:16px;
+  opacity:0.5;
+}
+.quote:after {
+  content: "”";
+  line-height:16px;
+  font-size:52px;
+  color: gray;
+  font-style: italic;
+  opacity:0.8;
+  display:none;
+}
+
+.quote .char {
+  line-height:16px;
+  font-size:32px;
+  color: #3b5998;
+  font-style: italic;
+  opacity:0.7;
+}
+
+.details {
+  margin-top:80px;
+  font-size:12px;
+  text-align:center;
+}
+
+.copyright {margin:0;}
+
+#chart {text-decoration:none;}

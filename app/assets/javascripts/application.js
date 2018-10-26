@@ -19,5 +19,6 @@
 //= require chartkick
 
 //= require jquery
+//= require jquery-ui
 
 //= require owl.carousel

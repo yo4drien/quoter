@@ -72,3 +72,6 @@ end
   gem 'owlcarousel-rails'
 
   gem 'jquery-rails'
+  gem 'jquery-ui-rails'
+
+  gem 'omniauth-facebook'

@@ -1,13 +1,38 @@
-<h1>Random Quote Generator</h1>
+<h1><em>Your</em> Quote of The Day</h1>
 
-<div class="owl-carousel">
-
+<div class="quote">
+<%= @random_quote.quote %><span class="char">”</span>
 </div>
+<div class="author">
+<%= @random_quote.author %>
+</div>
+<div class="date">
+  </div>
 
-<p>Quote Author Chart</p>
+<div class="details">
+
+<br><a href="javascript:" id="chart">Quote Author Chart</a><br><br>
 
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
-<%= timeline @quotes.map{|author, quotes| quotes.map{|q| [author, q.date, q.date + 5.year]}}.flatten(1), height: "500px", stacked: true %>
+<div class="chart">
+  <%= timeline @quotes.map{|author, quotes| quotes.map{|q| [author, q.date, q.date + 5.year]}}.flatten(1), stacked: true %>
+</div>
 
-<p>© <%= Date.today.year %> The Quote of the Day App.</p>
+<p class="copyright">© <%= Date.today.year %> Your Quote of the Day App.</p>
+
+</div>
+
+<script>
+    vchart = false;
+    $("#chart").click(function(){
+      if(vchart){
+        $(".chart").css("visibility", 'hidden');
+        $(".chart").css("height", '0px');
+      }else{
+        $(".chart").css("visibility", 'visible');
+        $(".chart").css("height", '300px');
+      }
+      vchart = !vchart;
+    });
+</script>
