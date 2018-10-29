@@ -74,4 +74,6 @@ end
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
 
+  gem 'devise'
   gem 'omniauth-facebook'
+  gem 'koala'

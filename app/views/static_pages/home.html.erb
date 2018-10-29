@@ -21,6 +21,8 @@
 
 <p class="copyright">© <%= Date.today.year %> Your Quote of the Day App.</p>
 
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+
 </div>
 
 <script>

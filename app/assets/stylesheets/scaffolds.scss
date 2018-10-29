@@ -88,18 +88,36 @@ label {
 h1 {margin:0 auto;text-align:center;
   color: #3b5998;}
 
-.quote {font-size:24px;text-align:center;margin:90px auto 20px auto;line-height:36px;width:70%;}
+.quote {
+  border-left:1px dotted black;
+  padding-left:22px;
+  font-size:24px;
+  margin:90px auto 0 auto;
+  line-height:36px;
+  width:70%;}
 
-.author {margin:0 auto;width:auto;text-align:center;font-size:16px;font-weight:700;}
+.author {
+  border-left:1px dotted gray;
+  width:70%;
+  padding-left:22px;
+  margin:0 auto;
+  font-style: italic;
+  padding-top:16px;
+  font-size:16px;
+  font-weight:700;}
+
+.author:before {
+  content: "-";
+}
 
 .quote:before {
   content: "“";
-  font-size:48px;
-  color: #3b5998;
+  font-size:58px;
+  color: #000;
   font-weight:700;
-  font-style: italic;
   line-height:16px;
-  opacity:0.5;
+  opacity:0.1;
+  margin-left:-36px;
 }
 .quote:after {
   content: "”";
@@ -107,20 +125,20 @@ h1 {margin:0 auto;text-align:center;
   font-size:52px;
   color: gray;
   font-style: italic;
-  opacity:0.8;
+  opacity:0.2;
   display:none;
 }
 
 .quote .char {
   line-height:16px;
   font-size:32px;
-  color: #3b5998;
-  font-style: italic;
-  opacity:0.7;
+  color: #000;
+  opacity:0.2;
+  margin-left:6px;
 }
 
 .details {
-  margin-top:80px;
+  margin-top:70px;
   font-size:12px;
   text-align:center;
 }
@@ -128,3 +146,4 @@ h1 {margin:0 auto;text-align:center;
 .copyright {margin:0;}
 
 #chart {text-decoration:none;}
+
